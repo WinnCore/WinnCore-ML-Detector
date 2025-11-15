@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# Rust
+target/
+Cargo.lock
+**/*.rs.bk
+
+# Datasets (too large for git)
+datasets/*.jsonl
+datasets/*.csv
+datasets/combined*.jsonl
+datasets/benign*.jsonl
+datasets/malicious*.jsonl
+
+# Models (release separately via GitHub Releases)
+models/*.onnx
+models/*.pkl
+
+# Synthetic malware binaries (too large, users can regenerate)
+synthetic-malware/samples/
+synthetic-malware/samples_*/
+synthetic-malware/samples_1000/
+synthetic-malware/samples_advanced/
+
+# Evaluation outputs
+eval/*.png
+eval/*.jpg
+
+# Temp files
+*.log
+*.tmp
+/tmp/
+test.jsonl
+*.jsonl.bak
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+.directory
+
+# Real malware (NEVER commit!)
+real-malware-safe/
+*.zip

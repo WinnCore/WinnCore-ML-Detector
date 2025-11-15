@@ -1,0 +1,46 @@
+[package]
+name = "arm64_extractor"
+version = "0.1.0"
+edition = "2021"
+authors = ["WinnCore <your@email.com>"]
+license = "Apache-2.0"
+
+[dependencies]
+# Binary parsing - ELF file format parsing
+goblin = "0.8"           # Parse ELF headers, sections, symbols
+
+# Disassembly - ARM64 instruction disassembly
+capstone = "0.12"        # Capstone disassembly engine bindings
+
+# Hashing - SHA-256 for file identification
+sha2 = "0.10"            # SHA-256 hashing
+hex = "0.4"              # Hex encoding for hashes
+
+# Serialization - Output features as JSON
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# CLI argument parsing
+clap = { version = "4.5", features = ["derive"] }
+
+# Error handling
+anyhow = "1.0"           # Simplified error handling
+
+# File I/O and path manipulation
+walkdir = "2.5"          # Recursive directory traversal
+
+# Logging
+log = "0.4"
+env_logger = "0.11"
+
+# Statistics - Calculate entropy
+statrs = "0.17"          # Statistical functions
+
+# Date/time handling
+chrono = "0.4"           # Timestamp generation
+
+[profile.release]
+opt-level = 3
+lto = true               # Link-time optimization for smaller binary
+codegen-units = 1        # Better optimization
+strip = true             # Strip symbols for smaller size

@@ -1,0 +1,14 @@
+# Machine Learning
+lightgbm==4.3.0          # Gradient boosting framework
+scikit-learn==1.4.0      # ML utilities (train/test split, metrics)
+numpy==1.26.4            # Numerical arrays
+pandas==2.2.0            # DataFrame handling
+
+# ONNX Export
+onnx==1.15.0             # ONNX format
+onnxmltools==1.12.0      # LightGBM to ONNX conversion
+skl2onnx==1.16.0         # Scikit-learn to ONNX helpers
+
+# Evaluation & Visualization
+matplotlib==3.8.2        # Plotting
+seaborn==0.13.2          # Statistical plots
